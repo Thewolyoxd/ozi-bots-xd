@@ -56,7 +56,7 @@ require("./src/handlers/mongoHandler");
 require("./src/handlers/functionHandler")(client);
 
 client
-  .login(settings.token)
+  .login(process.env.token)
   .then(() => console.log("Bot Başarıyla Bağlandı!"))
   .catch(() => console.log("[HATA] Bot Bağlanamadı!"));
 
